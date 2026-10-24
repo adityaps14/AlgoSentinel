@@ -1,4 +1,4 @@
 Input,Bubble Sort (ms),Insertion Sort (ms),Merge Sort (ms)
 1000,0.000,0.000,0.000
-5000,25.360,2.004,2.003
-10000,Skipped,Skipped,0.000
+5000,15.763,0.000,0.000
+10000,Skipped,Skipped,17.413

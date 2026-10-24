@@ -116,3 +116,14 @@ Automated tests cover:
 ## Author
 
 Developed as an academic C++ project to demonstrate algorithm design, analysis, testing, and performance benchmarking.
+
+## Project Resources
+
+- **Source Code:** [Browse the project files](https://github.com/adityaps14/AlgoSentinel/tree/main/src)
+- **Technical Documentation:** [Read Project Documentation](https://github.com/adityaps14/AlgoSentinel/blob/main/docs/PROJECT_DOCUMENTATION.md)
+- **Benchmark Results:** [View Benchmark CSV Report](https://github.com/adityaps14/AlgoSentinel/blob/main/reports/benchmark_results.csv)
+- **Automated Tests:** [Browse Test Files](https://github.com/adityaps14/AlgoSentinel/tree/main/tests)
+
+## Repository
+
+[AlgoSentinel on GitHub](https://github.com/adityaps14/AlgoSentinel)

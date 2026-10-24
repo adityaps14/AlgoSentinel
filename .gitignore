@@ -1,0 +1,14 @@
+# Compiled executable files
+*.exe
+
+# Temporary files
+*.tmp
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Operating system files
+Thumbs.db
+.DS_Store

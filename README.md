@@ -117,7 +117,7 @@ Developed as an academic C++ project to demonstrate algorithm design, analysis, 
 
 ## Dashboard Preview
 
-![AlgoSentinel Dashboard](screenshots/algosentinel-dashboard.png)
+![AlgoSentinel Dashboard](algosentinel-dashboard.png.jpeg)
 
 AlgoSentinel provides a visual interface for exploring algorithm performance and benchmark results.
 

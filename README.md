@@ -106,7 +106,7 @@ Automated tests cover:
 
 ## Future Improvements
 
-- Add a graphical performance dashboard.
+- improve the dashboard with interactive filters and additional visualizations.
 - Improve timing accuracy using repeated benchmark runs.
 - Add more algorithms and input distributions.
 - Generate comparison charts automatically.
@@ -117,7 +117,7 @@ Developed as an academic C++ project to demonstrate algorithm design, analysis, 
 
 ## Dashboard Preview
 
-![AlgoSentinel Dashboard](algosentinel-dashboard.png.jpeg)
+![AlgoSentinel Dashboard](https://github.com/adityaps14/AlgoSentinel/raw/main/algosentinel-dashboard.png.jpeg)
 
 AlgoSentinel provides a visual interface for exploring algorithm performance and benchmark results.
 

@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --bg: #070b16;
-    --panel: #10182a;
-    --panel-light: #151f35;
-    --border: rgba(148, 163, 184, 0.15);
-    --text: #edf4ff;
-    --muted: #91a0b9;
-    --cyan: #22d3ee;
-    --blue: #6485ff;
-    --green: #34d399;
-    --red: #fb7185;
+    --bg: #080810;
+    --panel: #11111f;
+    --panel-light: #19192b;
+    --border: rgba(164, 140, 255, 0.18);
+    --text: #f5f3ff;
+    --muted: #a5a2bd;
+    --cyan: #38d9ff;
+    --blue: #8b5cf6;
+    --green: #c4ff36;
+    --red: #ff5b78;
+    --violet: #a78bfa;
+    --lime: #c4ff36;
 }
 
 * {
@@ -26,8 +28,8 @@ html {
 body {
     min-height: 100vh;
     background:
-        radial-gradient(ellipse at 15% 0%, rgba(34, 211, 238, 0.09), transparent 35%),
-        radial-gradient(ellipse at 90% 20%, rgba(100, 133, 255, 0.10), transparent 35%),
+        radial-gradient(ellipse at 15% 0%, rgba(139, 92, 246, 0.16), transparent 35%),
+        radial-gradient(ellipse at 90% 20%, rgba(196, 255, 54, 0.06), transparent 35%),
         var(--bg);
     color: var(--text);
     font-family: 'Inter', 'Segoe UI', sans-serif;
@@ -906,5 +908,185 @@ canvas {
 
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== AlgoSentinel Premium Theme Override ===== */
+
+:root {
+    --bg: #080810;
+    --panel: #11111f;
+    --panel-light: #19192b;
+    --border: rgba(164, 140, 255, 0.20);
+    --text: #f5f3ff;
+    --muted: #a5a2bd;
+    --cyan: #38d9ff;
+    --blue: #8b5cf6;
+    --green: #c4ff36;
+    --violet: #a78bfa;
+    --lime: #c4ff36;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 15% 0%, rgba(139, 92, 246, 0.16), transparent 35%),
+        radial-gradient(ellipse at 90% 20%, rgba(196, 255, 54, 0.06), transparent 35%),
+        var(--bg);
+}
+
+.sidebar {
+    background: rgba(12, 12, 24, 0.96);
+    border-right-color: var(--border);
+}
+
+.brand-icon {
+    background: linear-gradient(135deg, #8b5cf6, #c4ff36);
+    color: #080810;
+    box-shadow: 0 0 22px rgba(139, 92, 246, 0.25);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #d8caff;
+    background: rgba(139, 92, 246, 0.15);
+}
+
+.sidebar-bottom {
+    background: rgba(25, 25, 43, 0.72);
+}
+
+.breadcrumb span,
+.eyebrow,
+.stat-icon,
+.range-value,
+.operation-count strong,
+.result-table td:first-child {
+    color: var(--violet);
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #a78bfa, #c4ff36);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-card,
+.panel {
+    background: linear-gradient(145deg, rgba(25, 25, 43, 0.96), rgba(15, 15, 28, 0.98));
+    border-color: var(--border);
+}
+
+.stat-card:hover {
+    border-color: rgba(139, 92, 246, 0.48);
+}
+
+.stat-icon {
+    background: rgba(139, 92, 246, 0.13);
+}
+
+.panel-tag {
+    color: #c9baff;
+    border-color: rgba(139, 92, 246, 0.28);
+    background: rgba(139, 92, 246, 0.10);
+}
+
+.form-control {
+    background: #0d0d19;
+    border-color: rgba(164, 140, 255, 0.22);
+}
+
+.form-control:focus {
+    border-color: var(--violet);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+.form-control option {
+    background: #11111f;
+}
+
+.btn-primary {
+    color: #080810;
+    background: linear-gradient(110deg, #a78bfa, #c4ff36);
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.16);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.24);
+}
+
+.btn-secondary:hover {
+    border-color: rgba(139, 92, 246, 0.45);
+    color: #c9baff;
+}
+
+.result-table th,
+.complexity-table th {
+    color: #c9baff;
+}
+
+.result-table tr:hover td,
+.complexity-table tr:hover td {
+    background: rgba(139, 92, 246, 0.045);
+}
+
+.array-stage {
+    background:
+        linear-gradient(rgba(164, 140, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(164, 140, 255, 0.04) 1px, transparent 1px),
+        rgba(7, 7, 17, 0.75);
+    background-size: 25px 25px;
+}
+
+.array-bar {
+    background: linear-gradient(180deg, #a78bfa, #6d28d9);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.12);
+}
+
+.array-bar.comparing {
+    background: linear-gradient(180deg, #fbbf24, #f97316);
+}
+
+.array-bar.swapping {
+    background: linear-gradient(180deg, #fb7185, #e11d48);
+}
+
+.array-bar.sorted {
+    background: linear-gradient(180deg, #c4ff36, #65a30d);
+}
+
+.legend-dot {
+    background: var(--violet);
+}
+
+.complexity-badge {
+    color: #c9baff;
+    background: rgba(139, 92, 246, 0.10);
+    border-color: rgba(139, 92, 246, 0.24);
+}
+
+.footer {
+    border-top-color: var(--border);
+}
+
+a {
+    text-underline-offset: 3px;
+}
+
+::selection {
+    background: rgba(139, 92, 246, 0.35);
+    color: #ffffff;
+}
+
+/* Keep the mobile layout intact */
+@media (max-width: 720px) {
+    .sidebar {
+        background: rgba(12, 12, 24, 0.98);
+        border-bottom-color: var(--border);
+    }
+
+    .nav-menu {
+        scrollbar-width: thin;
     }
 }

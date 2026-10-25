@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from pathlib import Path
+import os
+import platform
 import subprocess
 import csv
 import io
@@ -10,7 +12,12 @@ app = Flask(__name__)
 # All website files remain inside the web folder.
 BASE_DIR = Path(__file__).resolve().parent
 ENGINE_SOURCE = BASE_DIR / "benchmark_engine.cpp"
-ENGINE_EXE = BASE_DIR / "benchmark_engine.exe"
+
+if platform.system() == "Windows":
+    ENGINE_EXE = BASE_DIR / "benchmark_engine.exe"
+else:
+    ENGINE_EXE = BASE_DIR / "benchmark_engine"
+
 REPORT_FILE = BASE_DIR / "benchmark_results.csv"
 
 # Protect compilation and report writing from simultaneous requests.
@@ -55,7 +62,7 @@ def compile_engine():
 
 
 def save_results(size, results):
-    """Save website benchmark results separately from existing project reports."""
+    """Save website benchmark results to CSV."""
     file_exists = REPORT_FILE.exists()
 
     with REPORT_FILE.open("a", newline="", encoding="utf-8") as csv_file:
@@ -97,7 +104,6 @@ def benchmark():
             "error": "Invalid algorithm selected."
         }), 400
 
-    # Reject booleans and strings instead of silently accepting them as sizes.
     if isinstance(size, bool) or not isinstance(size, int):
         return jsonify({
             "error": "Input size must be a valid integer."
@@ -184,15 +190,17 @@ def benchmark():
 
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5001))
+
     print("=" * 48)
     print("       ALGOSENTINEL PERFORMANCE LAB")
     print("=" * 48)
     print("Starting Flask server...")
-    print("Open http://127.0.0.1:5000 in your browser.")
+    print(f"Open http://127.0.0.1:{port} in your browser.")
     print("Press Ctrl+C in this terminal to stop the server.")
 
     app.run(
-        host="127.0.0.1",
-        port=5001,
+        host="0.0.0.0",
+        port=port,
         debug=False,
     )

@@ -49,37 +49,35 @@ Open Command Prompt in the project root directory.
 
 ```bash
 g++ -std=c++11 src/main.cpp -o AlgoSentinel.exe
-AlgoSentinel.exe
+.\AlgoSentinel.exe
 ```
 
 ### 2. Run Searching Algorithms
 
 ```bash
 g++ -std=c++11 src/searching.cpp -o searching.exe
-searching.exe
+.\searching.exe
 ```
 
 ### 3. Run Sorting Algorithms
 
 ```bash
 g++ -std=c++11 src/sorting.cpp -o sorting.exe
-sorting.exe
+.\sorting.exe
 ```
 
 ### 4. Run the Benchmark
 
 ```bash
 g++ -std=c++11 -O2 src/benchmark.cpp -o benchmark.exe
-benchmark.exe
+.\benchmark.exe
 ```
-
-The benchmark report is saved to `reports/benchmark_results.csv`.
 
 ### 5. Run Automated Tests
 
 ```bash
 g++ -std=c++11 tests/test_algorithms.cpp -o tests/test_algorithms.exe
-tests/test_algorithms.exe
+.\tests\test_algorithms.exe
 ```
 
 ## Algorithms and Complexity
@@ -108,7 +106,7 @@ Automated tests cover:
 
 ## Future Improvements
 
-- Add a graphical performance dashboard.
+- improve the dashboard with interactive filters and additional visualizations.
 - Improve timing accuracy using repeated benchmark runs.
 - Add more algorithms and input distributions.
 - Generate comparison charts automatically.
@@ -116,6 +114,12 @@ Automated tests cover:
 ## Author
 
 Developed as an academic C++ project to demonstrate algorithm design, analysis, testing, and performance benchmarking.
+
+## Dashboard Preview
+
+![AlgoSentinel Dashboard](https://github.com/adityaps14/AlgoSentinel/raw/main/algosentinel-dashboard.png.jpeg)
+
+AlgoSentinel provides a visual interface for exploring algorithm performance and benchmark results.
 
 ## Project Resources
 

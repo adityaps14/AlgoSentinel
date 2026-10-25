@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoSentinel | Algorithm Performance Lab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-shell">
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">A</div>
+            <div>
+                <h2>AlgoSentinel</h2>
+                <span>PERFORMANCE LAB</span>
+            </div>
+        </div>
+
+        <div class="nav-label">WORKSPACE</div>
+        <a href="#overview" class="nav-item active">▦ &nbsp; Overview</a>
+        <a href="#benchmark" class="nav-item">◷ &nbsp; Benchmark Lab</a>
+        <a href="#visualizer" class="nav-item">▥ &nbsp; Sorting Visualizer</a>
+        <a href="#complexity" class="nav-item">⌘ &nbsp; Complexity Guide</a>
+
+        <div class="sidebar-bottom">
+            <div class="status-dot"></div>
+            <span>C++ ENGINE · LOCAL</span>
+            <p>Built for algorithm analysis.</p>
+        </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+        <header class="topbar">
+            <div>
+                <div class="eyebrow">ALGORITHM INTELLIGENCE PLATFORM</div>
+                <h1>Performance <span>Overview</span></h1>
+                <p class="subtitle">Analyze, benchmark and understand your algorithms.</p>
+            </div>
+            <div class="engine-badge"><span class="pulse"></span> LOCAL ENGINE</div>
+        </header>
+
+        <section class="welcome-panel">
+            <div>
+                <div class="eyebrow">WELCOME TO ALGOSENTINEL</div>
+                <h2>Measure performance.<br><span>Understand complexity.</span></h2>
+                <p>Run your C++ algorithms and compare their performance using real measurements.</p>
+                <a href="#benchmark" class="primary-button">Open Benchmark Lab &nbsp; →</a>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="art-ring ring-one"></div>
+                <div class="art-ring ring-two"></div>
+                <div class="art-core">A<span>.</span></div>
+                <div class="art-caption">ALGORITHM<br>ANALYTICS</div>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <div class="stat-top"><span>SEARCH ALGORITHMS</span><span class="stat-icon">⌕</span></div>
+                <div class="stat-value">02</div>
+                <p>Linear Search · Binary Search</p>
+            </article>
+            <article class="stat-card">
+                <div class="stat-top"><span>SORTING ALGORITHMS</span><span class="stat-icon">↕</span></div>
+                <div class="stat-value">03</div>
+                <p>Bubble · Insertion · Merge</p>
+            </article>
+            <article class="stat-card">
+                <div class="stat-top"><span>ENGINE STATUS</span><span class="stat-icon">⌘</span></div>
+                <div class="stat-value small-value">C++</div>
+                <p>Connected through local backend</p>
+            </article>
+        </section>
+
+        <section class="content-grid" id="benchmark">
+            <article class="panel benchmark-panel">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">LIVE ANALYSIS</div>
+                        <h2>Benchmark Lab</h2>
+                    </div>
+                    <span class="tag">C++ ENGINE</span>
+                </div>
+
+                <p class="panel-description">Configure an experiment to compare the execution time of your algorithms.</p>
+
+                <form id="benchmarkForm">
+                    <label for="algorithm">Algorithm</label>
+                    <select id="algorithm" name="algorithm">
+                        <option value="all">Compare all sorting algorithms</option>
+                        <option value="bubble">Bubble Sort</option>
+                        <option value="insertion">Insertion Sort</option>
+                        <option value="merge">Merge Sort</option>
+                    </select>
+
+                    <label for="inputSize">Input size</label>
+                    <select id="inputSize" name="size">
+                        <option value="1000">1,000 elements</option>
+                        <option value="5000" selected>5,000 elements</option>
+                        <option value="10000">10,000 elements</option>
+                    </select>
+
+                    <button class="primary-button full-button" id="runBenchmark" type="submit">
+                        ▶ &nbsp; Run C++ Benchmark
+                    </button>
+                </form>
+
+                <div id="benchmarkStatus" class="status-message" role="status">Ready when you are. Configure and run a benchmark.</div>
+                <div id="benchmarkResults" class="results-list"></div>
+            </article>
+
+            <article class="panel chart-panel">
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">VISUAL ANALYTICS</div>
+                        <h2>Execution Time</h2>
+                    </div>
+                    <span class="chart-unit">MILLISECONDS</span>
+                </div>
+                <p class="panel-description">Measured runtime comparison for your latest experiment.</p>
+                <div class="chart-wrap">
+                    <canvas id="benchmarkChart" aria-label="Benchmark execution time chart"></canvas>
+                </div>
+                <div id="chartEmpty" class="chart-empty">Run a benchmark to display actual C++ results here.</div>
+            </article>
+        </section>
+
+        <section class="panel visualizer-panel" id="visualizer">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">STEP-BY-STEP EXPLORATION</div>
+                    <h2>Sorting Visualizer</h2>
+                </div>
+                <span class="tag">ANIMATION</span>
+            </div>
+            <p class="panel-description">Explore how sorting algorithms arrange an array. This visualizer demonstrates the algorithm step by step.</p>
+
+            <div class="visualizer-controls">
+                <div class="control-group">
+                    <label for="sortAlgorithm">Sorting algorithm</label>
+                    <select id="sortAlgorithm">
+                        <option value="bubble">Bubble Sort</option>
+                        <option value="insertion">Insertion Sort</option>
+                        <option value="merge">Merge Sort</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="arraySize">Array size: <span id="arraySizeLabel">24</span></label>
+                    <input type="range" id="arraySize" min="8" max="48" value="24">
+                </div>
+                <button id="generateArray" class="secondary-button" type="button">↻ New Array</button>
+                <button id="startVisualization" class="primary-button" type="button">▶ Visualize</button>
+            </div>
+
+            <div id="arrayBars" class="array-bars" aria-label="Sorting array visualization"></div>
+            <div class="visualizer-footer">
+                <span id="visualizerStatus">Ready to visualize</span>
+                <span id="operationCount">Operations: 0</span>
+            </div>
+        </section>
+
+        <section class="panel complexity-panel" id="complexity">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow">THEORY & ANALYSIS</div>
+                    <h2>Complexity Guide</h2>
+                </div>
+            </div>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr><th>Algorithm</th><th>Best Case</th><th>Average Case</th><th>Worst Case</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Linear Search</td><td>O(1)</td><td>O(n)</td><td>O(n)</td></tr>
+                        <tr><td>Binary Search</td><td>O(1)</td><td>O(log n)</td><td>O(log n)</td></tr>
+                        <tr><td>Bubble Sort</td><td>O(n)*</td><td>O(n²)</td><td>O(n²)</td></tr>
+                        <tr><td>Insertion Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td></tr>
+                        <tr><td>Merge Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="footnote">*Bubble Sort achieves O(n) best-case time when its implementation exits early on an already sorted array.</p>
+        </section>
+
+        <footer class="footer">
+            <div><strong>AlgoSentinel</strong> <span>Algorithm Performance Analysis and Benchmarking System</span></div>
+            <span>ACADEMIC C++ PROJECT · LOCAL DASHBOARD</span>
+        </footer>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</div>
+</body>
+</html>

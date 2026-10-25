@@ -49,37 +49,35 @@ Open Command Prompt in the project root directory.
 
 ```bash
 g++ -std=c++11 src/main.cpp -o AlgoSentinel.exe
-AlgoSentinel.exe
+.\AlgoSentinel.exe
 ```
 
 ### 2. Run Searching Algorithms
 
 ```bash
 g++ -std=c++11 src/searching.cpp -o searching.exe
-searching.exe
+.\searching.exe
 ```
 
 ### 3. Run Sorting Algorithms
 
 ```bash
 g++ -std=c++11 src/sorting.cpp -o sorting.exe
-sorting.exe
+.\sorting.exe
 ```
 
 ### 4. Run the Benchmark
 
 ```bash
 g++ -std=c++11 -O2 src/benchmark.cpp -o benchmark.exe
-benchmark.exe
+.\benchmark.exe
 ```
-
-The benchmark report is saved to `reports/benchmark_results.csv`.
 
 ### 5. Run Automated Tests
 
 ```bash
 g++ -std=c++11 tests/test_algorithms.cpp -o tests/test_algorithms.exe
-tests/test_algorithms.exe
+.\tests\test_algorithms.exe
 ```
 
 ## Algorithms and Complexity

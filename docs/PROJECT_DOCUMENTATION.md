@@ -67,22 +67,16 @@ Different algorithms require different amounts of time and operations to process
 \*\*Merge Sort:\*\* Divides the array into smaller parts, sorts them, and merges the results. Complexity: O(n log n).
 
 
-
 \## 5. System Requirements
 
-
-
-\- Operating System: Windows
-
-\- Programming Language: C++
-
-\- Compiler: GCC/G++
-
-\- C++ Standard: C++11
-
-\- Code Editor: Notepad or Visual Studio Code
-
-\- Storage: Sufficient space for source files and benchmark reports
+- **Operating System:** Windows 10/11
+- **Programming Language:** C++ and Python
+- **Compiler:** GCC/G++ (MinGW)
+- **C++ Standard:** C++11
+- **Web Framework:** Flask
+- **Frontend Technologies:** HTML, CSS, JavaScript
+- **Code Editor:** Visual Studio Code or any text editor
+- **Storage:** Sufficient space for source files, executable files, and benchmark reports
 
 
 
@@ -140,21 +134,15 @@ Very short operations may display 0.000 milliseconds because of timing precision
 
 \## 9. Conclusion
 
-
-
-AlgoSentinel demonstrates fundamental searching and sorting algorithms, performance measurement, CSV reporting, and automated testing. It provides a foundation for further work, such as graphical charts and more accurate repeated benchmarks.
+AlgoSentinel is a C++-based algorithm analysis and benchmarking project that compares searching and sorting algorithms using execution time and operation counts. It includes automated tests, CSV benchmark reporting, and a Flask-based web dashboard for presenting algorithm performance. The project demonstrates fundamental data structures and algorithms, performance analysis, and software testing. It can be extended through repeated benchmark runs, additional algorithms, and improved visualizations.
 
 
 
 \## 10. Future Scope
 
-
-
-\- Build an interactive graphical dashboard.
-
-\- Add repeated benchmark runs and average timings.
-
-\- Compare additional algorithms.
-
-\- Generate performance charts from CSV data.
+- Add repeated benchmark runs and average execution times for more reliable comparisons.
+- Include additional searching and sorting algorithms.
+- Improve the dashboard with interactive filters and additional visualizations.
+- Add export options for performance charts and summary reports.
+- Test algorithm performance across more input sizes and datasets.
 

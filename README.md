@@ -25,18 +25,29 @@ AlgoSentinel is a C++ project designed to analyze and compare the performance of
 
 ```text
 AlgoSentinel/
+├── docs/
+│   └── PROJECT_DOCUMENTATION.md
+├── reports/
+│   └── benchmark_results.csv
 ├── src/
 │   ├── main.cpp
 │   ├── searching.cpp
 │   ├── sorting.cpp
 │   └── benchmark.cpp
 ├── tests/
-│   └── test_algorithms.cpp
-├── reports/
-│   └── benchmark_results.csv
-├── screenshots/
-├── docs/
-│   └── PROJECT_DOCUMENTATION.md
+│   ├── test_algorithms.cpp
+│   └── test_algorithms.exe
+├── web/
+│   ├── app.py
+│   ├── benchmark_engine.cpp
+│   ├── benchmark_engine.exe
+│   ├── benchmark_results.csv
+│   ├── static/
+│   │   ├── css/style.css
+│   │   └── js/app.js
+│   └── templates/
+│       └── index.html
+├── algosentinel-dashboard.png.jpeg
 ├── .gitignore
 └── README.md
 ```

@@ -132,6 +132,15 @@ Developed as an academic C++ project to demonstrate algorithm design, analysis, 
 
 AlgoSentinel provides a visual interface for exploring algorithm performance and benchmark results.
 
+## Benchmark Screenshots
+
+### Sorting Benchmark
+![Sorting Benchmark Results](web/screenshots/02-sorting-benchmark.png)
+
+### Search Comparison
+![Linear vs Binary Search](web/screenshots/03-search-comparison.png)
+
+
 ## Project Resources
 
 - **Source Code:** [Browse the project files](https://github.com/adityaps14/AlgoSentinel/tree/main/src)

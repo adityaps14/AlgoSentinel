@@ -135,11 +135,12 @@ AlgoSentinel provides a visual interface for exploring algorithm performance and
 ## Benchmark Screenshots
 
 ### Sorting Benchmark
-![Sorting Benchmark Results](web/screenshots/02-sorting-benchmark.png)
+
+![Sorting Benchmark Results](https://raw.githubusercontent.com/adityaps14/AlgoSentinel/main/web/screenshots/02-sorting-benchmark.png)
 
 ### Search Comparison
-![Linear vs Binary Search](web/screenshots/03-search-comparison.png)
 
+![Linear vs Binary Search](https://raw.githubusercontent.com/adityaps14/AlgoSentinel/main/web/screenshots/03-search-comparison.png)
 
 ## Project Resources
 

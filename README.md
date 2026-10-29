@@ -126,21 +126,6 @@ Automated tests cover:
 
 Developed as an academic C++ project to demonstrate algorithm design, analysis, testing, and performance benchmarking.
 
-## Dashboard Preview
-
-![AlgoSentinel Dashboard](https://raw.githubusercontent.com/adityaps14/AlgoSentinel/main/algosentinel-dashboard.png.jpeg)
-
-AlgoSentinel provides a visual interface for exploring algorithm performance and benchmark results.
-
-## Benchmark Screenshots
-
-### Sorting Benchmark
-
-![Sorting Benchmark Results](https://raw.githubusercontent.com/adityaps14/AlgoSentinel/main/web/screenshots/02-sorting-benchmark.png)
-
-### Search Comparison
-
-![Linear vs Binary Search](https://raw.githubusercontent.com/adityaps14/AlgoSentinel/main/web/screenshots/03-search-comparison.png)
 
 ## Project Resources
 
